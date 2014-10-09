@@ -2,7 +2,7 @@ module Adhoq
   class Executor
     class << self
       def select(query)
-        current_connection.send(:select, query)
+        current_connection.exec_query(query)
       end
 
       def current_connection
